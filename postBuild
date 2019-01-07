@@ -1,0 +1,5 @@
+#!/bin/bash -e
+
+THISDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+#
+#psql -f ${THISDIR}/init.sql
