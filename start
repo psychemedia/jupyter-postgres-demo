@@ -16,7 +16,7 @@ if [ ! -d "$PGDATA" ]; then
 fi
 /usr/lib/postgresql/10/bin/pg_ctl -D "$PGDATA" status || nohup /usr/lib/postgresql/10/bin/pg_ctl -D "$PGDATA" -l "$PGDATA/pg.log" start  > /dev/null 2>&1 &
 
-psql postgres -c "CREATE USER jovyan PASSWORD 'jovyan'"
+psql postgres -c "CREATE USER test PASSWORD 'testpass'"
 createdb -O test test
 
 #nohup /usr/lib/postgresql/10/bin/pg_ctl -D /var/lib/postgresql/10/main -l logfile start  > /dev/null 2>&1 &
