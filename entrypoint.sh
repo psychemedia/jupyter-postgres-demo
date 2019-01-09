@@ -2,16 +2,13 @@
 set -e
 
 PGDATA=${PGDATA:-/home/jovyan/srv/pgsql}
-/usr/lib/postgresql/10/bin/initdb -D "$PGDATA" --auth-host=md5 --encoding=UTF8
 
+if [ ! -d "$PGDATA" ]; then
+  /usr/lib/postgresql/10/bin/initdb -D "$PGDATA" --auth-host=md5 --encoding=UTF8
+fi
+/usr/lib/postgresql/10/bin/pg_ctl -D "$PGDATA" status || /usr/lib/postgresql/10/bin/pg_ctl -D "$PGDATA" -l "$PGDATA/pg.log" start
 
-nohup /usr/lib/postgresql/10/bin/pg_ctl -D /var/lib/postgresql/10/main -l logfile start  > /dev/null 2>&1 &
-
-
-#echo redspot | sudo -S service postgresql start
-
-psql postgres -c "CREATE USER test WITH PASSWORD 'testpass';"
-
+psql postgres -c "CREATE USER test PASSWORD 'testpass'"
 createdb -O test test
 
 exec "$@"
