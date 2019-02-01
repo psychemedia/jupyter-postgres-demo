@@ -1,3 +1,4 @@
+#via https://linuxhint.com/install-pgadmin4-ubuntu/
 import os
 DATA_DIR = os.path.realpath(os.path.expanduser(u'~/.pgadmin/'))
 LOG_FILE = os.path.join(DATA_DIR, 'pgadmin4.log')
