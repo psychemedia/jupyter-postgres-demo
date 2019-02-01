@@ -8,6 +8,6 @@ dependencies:
     - pandas
     - git+https://github.com/catherinedevlin/ipython-sql.git
     - git+https://github.com/jupyterlab/jupyterlab
-    - jupyter-server-proxy
+    - https://github.com/manics/jupyter-server-proxy/archive/config-port.zip
 
 
