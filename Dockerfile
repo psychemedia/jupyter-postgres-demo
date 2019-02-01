@@ -1,6 +1,8 @@
 FROM jupyter/minimal-notebook
 
 USER root
+
+#The trick in this Dockerfile is to change the ownership of /run/postgresql
 RUN  apt-get update && \
     apt-get install -qq -y \
         postgresql postgresql-client && apt-get clean && \
