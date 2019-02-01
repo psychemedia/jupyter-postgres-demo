@@ -11,9 +11,7 @@ c.ServerProxy.servers = {
         },
     },
     'pgadmin': {
-        #This is almost certainly not the right start command
-        #Also, some config may be required
-        'command': ['pgadmin4'],
+        'command': ['python', '/srv/conda/lib/python3.6/site-packages/pgadmin4/pgAdmin4.py'],
         'timeout': 120,
         'launcher_entry': {
             'enabled': True,
