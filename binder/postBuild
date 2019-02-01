@@ -1,5 +1,6 @@
 #!/bin/bash
 set -eux
+
 PGDATA=${PGDATA:-/home/jovyan/srv/pgsql}
 if [ ! -d "$PGDATA" ]; then
   initdb -D "$PGDATA" --auth-host=md5 --encoding=UTF8
@@ -12,3 +13,28 @@ $HOME/init_db.sh
 #Put an equivalent of the above in a config file: init_db.sql
 #psql -U postgres postgres -f init_db.sql
 #psql test < seed_db.sql
+
+
+mkdir -p $HOME/.jupyter/
+#This script runs in $HOME rather than $HOME/binder
+mv jupyter_notebook_config.py $HOME/.jupyter/
+#Enable the OpenRefine icon in JuptyerLab desktop launcher
+jupyter labextension install jupyterlab-server-proxy
+
+
+#pgadmin
+wget https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v4.1/pip/pgadmin4-4.1-py2.py3-none-any.whl
+pip install pgadmin4-4.1-py2.py3-none-any.whl
+#pip install flask-htmlmin
+
+#echo "DEFAULT_SERVER = '0.0.0.0'" >> lib/python2.7/site-packages/pgadmin4/config_local.py
+#echo "DEFAULT_SERVER_PORT = 5050" >> lib/python2.7/site-packages/pgadmin4/config_local.py
+
+#Set up the proxy bits...
+#mkdir -p $HOME/.jupyter/
+
+#This script runs in $HOME rather than $HOME/binder
+#mv jupyter_notebook_config.py postgresql-logo.svg $HOME/.jupyter/
+
+#Enable the OpenRefine icon in JuptyerLab desktop launcher
+#jupyter labextension install jupyterlab-server-proxy
