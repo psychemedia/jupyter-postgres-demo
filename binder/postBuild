@@ -17,7 +17,7 @@ $HOME/init_db.sh
 
 mkdir -p $HOME/.jupyter/
 #This script runs in $HOME rather than $HOME/binder
-mv jupyter_notebook_config.py $HOME/.jupyter/
+mv jupyter_notebook_config.py postgresql-logo.svg $HOME/.jupyter/
 #Enable the OpenRefine icon in JuptyerLab desktop launcher
 jupyter labextension install jupyterlab-server-proxy
 
