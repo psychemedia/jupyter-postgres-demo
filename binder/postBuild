@@ -22,13 +22,14 @@ mv jupyter_notebook_config.py $HOME/.jupyter/
 jupyter labextension install jupyterlab-server-proxy
 
 
+#pgadmin
+wget https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v4.1/pip/pgadmin4-4.1-py2.py3-none-any.whl
+pip install pgadmin4-4.1-py2.py3-none-any.whl
+
 #Copy config file over to pgadmin4 path
 #Is there a better way to identify this path?
 mv config_local.py /srv/conda/lib/python3.6/site-packages/pgadmin4/
 
-#pgadmin
-wget https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v4.1/pip/pgadmin4-4.1-py2.py3-none-any.whl
-pip install pgadmin4-4.1-py2.py3-none-any.whl
 #pip install flask-htmlmin
 
 #echo "DEFAULT_SERVER = '0.0.0.0'" >> lib/python2.7/site-packages/pgadmin4/config_local.py
