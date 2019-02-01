@@ -4,6 +4,6 @@ PGDATA=${PGDATA:-/home/jovyan/srv/pgsql}
 pg_ctl -D "$PGDATA" -l "$PGDATA/pg.log" start
 
 #We get a permission error on this?
-python /srv/conda/lib/python3.6/site-packages/pgadmin4/pgAdmin4.py
+#python /srv/conda/lib/python3.6/site-packages/pgadmin4/pgAdmin4.py
 
 exec "$@"
