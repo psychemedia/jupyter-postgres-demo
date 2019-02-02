@@ -13,9 +13,15 @@ $HOME/init_db.sh
 #psql -U postgres postgres -f init_db.sql
 #psql test < seed_db.sql
 
+
 #Franchise
 #https://github.com/HVF/franchise/blob/master/DEPLOYING_LOCALLY.md
 git clone --depth 1 https://github.com/HVF/franchise.git
 cd franchise
 yarn install
 yarn build
+
+mkdir -p $HOME/.jupyter/
+
+#This script runs in $HOME rather than $HOME/binder
+mv jupyter_notebook_config.py $HOME/.jupyter/
