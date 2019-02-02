@@ -5,6 +5,7 @@ dependencies:
   - pandas
   - postgresql
   - psycopg2
+  - uwsgi
   - pip:
     - git+https://github.com/catherinedevlin/ipython-sql.git
     - git+https://github.com/jupyterlab/jupyterlab
