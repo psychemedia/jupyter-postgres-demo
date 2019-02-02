@@ -12,3 +12,10 @@ $HOME/init_db.sh
 #Put an equivalent of the above in a config file: init_db.sql
 #psql -U postgres postgres -f init_db.sql
 #psql test < seed_db.sql
+
+#Franchise
+#https://github.com/HVF/franchise/blob/master/DEPLOYING_LOCALLY.md
+git clone --depth 1 https://github.com/HVF/franchise.git
+cd franchise
+yarn install
+yarn build
