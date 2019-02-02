@@ -6,6 +6,6 @@ dependencies:
   - psycopg2
   - yarn
   - pip:
-    - jupyter-server-proxy
+    - https://github.com/jupyterhub/jupyter-server-proxy/archive/master.zip
     - pandas
     - git+https://github.com/catherinedevlin/ipython-sql.git
