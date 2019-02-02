@@ -2,6 +2,7 @@ c.ServerProxy.servers = {
     'franchise': {
         'command': ['cd', 'franchise/bundle', '&&','python','-m', 'http.server', '{port}'],
         #'port': 8088,
+        'absolute_url':True,
         'timeout': 120,
         'launcher_entry': {
             'enabled': True,
