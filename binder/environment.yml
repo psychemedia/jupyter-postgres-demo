@@ -2,12 +2,11 @@ name: postgres-example
 channels:
   - defaults
 dependencies:
+  - pandas
   - postgresql
   - psycopg2
   - pip:
-    - pandas
     - git+https://github.com/catherinedevlin/ipython-sql.git
     - git+https://github.com/jupyterlab/jupyterlab
-    - https://github.com/manics/jupyter-server-proxy/archive/config-port.zip
-
-
+    - https://github.com/jupyterhub/jupyter-server-proxy/archive/master.zip
+    - https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v4.1/pip/pgadmin4-4.1-py2.py3-none-any.whl
