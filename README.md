@@ -9,4 +9,4 @@ Example via [@manics on Jupyter dscourse site](https://discourse.jupyter.org/t/r
 
 See the other branches for versions that do, albeit at the expense of using a Dockerfile.
 
-
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/psychemedia/jupyter-postgres-demo/franchise)
