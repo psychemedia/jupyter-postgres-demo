@@ -24,6 +24,7 @@ c.ServerProxy.servers = {
             '/srv/conda/lib/python3.6/site-packages/pgadmin4',
             '--manage-script-name',
         ],
+        'absolute_url': True,
         'timeout': 120,
         #'port': 5050,
         'launcher_entry': {
