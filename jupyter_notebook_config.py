@@ -14,7 +14,17 @@ c.ServerProxy.servers = {
     #},
     'pgadmin': {
         #Set the port for pgadmin dynamically
-        'command': ['PGADMIN_PORT={port}','python', '/srv/conda/lib/python3.6/site-packages/pgadmin4/pgAdmin4.py'],
+        'command': [
+            'gunicorn',
+            '-b',
+            '127.0.0.1:{port}',
+            '-e',
+            'SCRIPT_NAME={base_url}pgadmin',
+            '--chdir',
+            '/srv/conda/lib/python3.6/site-packages/pgadmin4',
+            'pgAdmin4:app',
+        ],
+        'absolute_url': True,
         'timeout': 120,
         #'port': 5050,
         'launcher_entry': {
