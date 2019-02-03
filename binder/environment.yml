@@ -2,12 +2,10 @@ name: postgres-example
 channels:
   - defaults
 dependencies:
+  - gunicorn
   - pandas
   - postgresql
   - psycopg2
-  # uwsgi needs libiconv
-  - libiconv
-  - uwsgi
   - pip:
     - git+https://github.com/catherinedevlin/ipython-sql.git
     - git+https://github.com/jupyterlab/jupyterlab
