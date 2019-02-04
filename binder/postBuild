@@ -18,28 +18,5 @@ $HOME/init_db.sh
 mkdir -p $HOME/.jupyter/
 #This script runs in $HOME rather than $HOME/binder
 mv jupyter_notebook_config.py postgresql-logo.svg $HOME/.jupyter/
-#Enable the OpenRefine icon in JuptyerLab desktop launcher
+#Enable the PostgreSQL icon in JuptyerLab desktop launcher
 jupyter labextension install jupyterlab-server-proxy
-
-
-#pgadmin
-
-#Copy config file over to pgadmin4 path
-#Is there a better way to identify this path?
-mv config_local.py /srv/conda/lib/python3.6/site-packages/pgadmin4/
-# Setup pgadmin in server mode
-PGADMIN_SETUP_EMAIL=jovyan@localhost PGADMIN_SETUP_PASSWORD=secret python /srv/conda/lib/python3.6/site-packages/pgadmin4/setup.py
-
-#pip install flask-htmlmin
-
-#echo "DEFAULT_SERVER = '0.0.0.0'" >> lib/python2.7/site-packages/pgadmin4/config_local.py
-#echo "DEFAULT_SERVER_PORT = 5050" >> lib/python2.7/site-packages/pgadmin4/config_local.py
-
-#Set up the proxy bits...
-#mkdir -p $HOME/.jupyter/
-
-#This script runs in $HOME rather than $HOME/binder
-#mv jupyter_notebook_config.py postgresql-logo.svg $HOME/.jupyter/
-
-#Enable the OpenRefine icon in JuptyerLab desktop launcher
-#jupyter labextension install jupyterlab-server-proxy
