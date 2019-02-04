@@ -1,6 +1,19 @@
 # jupyter-postgres-demo
 
-Demo of launching a binderhub notebook server with a free running Postgres server
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/psychemedia/jupyter-postgres-demo/server-proxy)
+
+Demo of launching a binderhub notebook server with a free running Postgres server and pgadmin (h/t @manics and [this PR](https://github.com/psychemedia/jupyter-postgres-demo/pull/2).
+
+pgadmin login:
+
+- email: `jovyan@localhost`
+- password: `secret`
+
+Current issue w/ pgadmin: [query tool won't load](https://github.com/psychemedia/jupyter-postgres-demo/issues/3).
+
+There is a test db set up for user `testuser` and password `testpass`.
+
+
 
 The `init.db` file is called to set up any required users, databases, etc, and it in turn seeds a test database as defined in `seed_db.sql`.
 
