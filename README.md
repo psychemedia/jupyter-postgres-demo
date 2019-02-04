@@ -2,6 +2,10 @@
 
 **pgadmin demo has moved to `pgadmin` branch**
 
+
+
+** THIS BRANCH IS DEPRECATED AND BROKEN AND WILL DISAPPEAR AT SOME POINT **
+
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/psychemedia/jupyter-postgres-demo/server-proxy)
 
 Demo of launching a binderhub notebook server with a free running Postgres server.
