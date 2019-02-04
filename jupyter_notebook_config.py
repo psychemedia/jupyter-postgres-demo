@@ -17,7 +17,7 @@ c.ServerProxy.servers = {
         'command': [
             'gunicorn',
             '-b',
-            '[::]:{port}',
+            '127.0.0.1:{port}',
             '-e',
             'SCRIPT_NAME={base_url}pgadmin',
             '--chdir',
