@@ -1,5 +1,7 @@
 # jupyter-postgres-demo
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/psychemedia/jupyter-postgres-demo/master)
+
 Demo of launching a binderhub notebook server with a free running Postgres server
 
 The `init.db` file is called to set up any required users, databases, etc, and it in turn seeds a test database as defined in `seed_db.sql`.
