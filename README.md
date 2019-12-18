@@ -1,3 +1,5 @@
+-- ARCHIVED: USE https://github.com/ouseful-template-repos/binder-postgres INSTEAD --
+
 # jupyter-postgres-demo
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/psychemedia/jupyter-postgres-demo/master)
