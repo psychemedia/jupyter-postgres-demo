@@ -9,8 +9,11 @@ fi
 
 pg_ctl -D "$PGDATA" -l "$PGDATA/pg.log" start
 
-chmod +x $HOME/init_db.sh
-$HOME/init_db.sh
+#Copy the initialisation files into the final container
+mv init_db $USER_PATH/
+chmod +x $USER_PATH/init_db/postgres/init_db.sh
+$USER_PATH/init_db/postgres/init_db.sh
+
 #Put an equivalent of the above in a config file: init_db.sql
 #psql -U postgres postgres -f init_db.sql
 #psql test < seed_db.sql
